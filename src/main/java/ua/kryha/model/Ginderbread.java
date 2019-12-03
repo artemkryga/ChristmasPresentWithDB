@@ -29,4 +29,8 @@ public class Ginderbread extends Sweetness {
     public void setHasBaking(boolean hasBaking) {
         this.hasBaking = hasBaking;
     }
+    @Override
+    public String toString() {
+        return "Ginderbread" + " " + this.getName() + " " + this.getWeight() + " " + this.getSugarContent();
+    }
 }

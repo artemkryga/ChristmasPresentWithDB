@@ -35,6 +35,15 @@ public abstract class Sweetness {
         return sugarContent;
     }
 
+    @Override
+    public String toString() {
+        return "Sweetness{" +
+                "name='" + name + '\'' +
+                ", weight=" + weight +
+                ", sugarContent=" + sugarContent +
+                '}';
+    }
+
     public void setSugarContent(int sugarContent) {
         this.sugarContent = sugarContent;
     }

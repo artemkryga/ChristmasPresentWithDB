@@ -29,4 +29,9 @@ public class Candy extends Sweetness {
     public void setKindOfChoko(String kindOfChoko) {
         this.kindOfChoko = kindOfChoko;
     }
+
+    @Override
+    public String toString() {
+        return "Candy" + " " + this.getName() + " " + this.getWeight() + " " + this.getSugarContent();
+    }
 }

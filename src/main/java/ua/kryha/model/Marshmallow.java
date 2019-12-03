@@ -20,4 +20,9 @@ public class Marshmallow extends Sweetness {
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Marshmallow" + " " + this.getName() + " " + this.getWeight() + " " + this.getSugarContent();
+    }
 }
