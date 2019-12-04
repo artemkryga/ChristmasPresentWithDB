@@ -1,12 +1,16 @@
 package ua.kryha.model;
 
-public class Ginderbread extends Sweetness {
 
+public class Ginderbread extends Sweetness {
+    int a = 1;
+    int b = 2;
     private boolean hasGinder;
     private boolean hasBaking;
 
     public Ginderbread(String name, int weight, int sugarContent) {
         super(name, weight, sugarContent);
+        this.hasGinder = getRandomHasGinder(a + (int)(Math.random() * b));
+        this.hasBaking = getRandomHasBaking(a + (int)(Math.random() * b));
     }
 
     @Override
@@ -29,8 +33,17 @@ public class Ginderbread extends Sweetness {
     public void setHasBaking(boolean hasBaking) {
         this.hasBaking = hasBaking;
     }
+
+    public boolean getRandomHasBaking(int key){
+        return key == 1;
+    }
+
+    public boolean getRandomHasGinder(int key){
+        return key == 1;
+    }
     @Override
     public String toString() {
-        return "Ginderbread" + " " + this.getName() + " " + this.getWeight() + " " + this.getSugarContent();
+        return "Ginderbread" + " " + this.getName() + " " + this.getWeight() + " " + this.getSugarContent()
+                + " " + this.isHasBaking() + " " + this.isHasGinder();
     }
 }

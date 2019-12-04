@@ -17,4 +17,5 @@ public class UtilityController {
     public List<Sweetness> getAllFromDB() {
        return sweetnessJDBC.getAllFromDB();
     }
+
 }
