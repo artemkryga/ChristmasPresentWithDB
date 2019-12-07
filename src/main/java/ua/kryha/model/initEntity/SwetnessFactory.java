@@ -1,9 +1,13 @@
-package ua.kryha.model;
+package ua.kryha.model.initEntity;
 
-public class SwetnessFactory {
+import ua.kryha.model.entity.Candy;
+import ua.kryha.model.entity.Ginderbread;
+import ua.kryha.model.entity.Marshmallow;
+import ua.kryha.model.entity.Sweetness;
 
-    public Sweetness getSweetness(SweetnessType type , String name , int weight , int sugarContent) {
-        Sweetness toReturn = null;
+
+public class SwetnessFactory { public Sweetness getSweetness(SweetnessType type , String name , int weight , int sugarContent) {
+        Sweetness toReturn;
         switch (type) {
             case CANDY:
                 toReturn = new Candy(name , weight , sugarContent);

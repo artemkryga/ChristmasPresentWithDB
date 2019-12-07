@@ -1,26 +1,36 @@
 package ua.kryha.view;
 
+import ua.kryha.model.entity.Sweetness;
+
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class View {
 
-    // Resource Bundle Installation's
-    static String MESSAGES_BUNDLE_NAME = "messages";
-    public static final ResourceBundle bundle =
-            ResourceBundle.getBundle(
-                    MESSAGES_BUNDLE_NAME,
-                    new Locale("ua", "UA"));
+    static String MESSAGES_BUNDLE_NAME = "resources_en";
+    public static final ResourceBundle bundle = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME, new Locale("en"));
 
     public void printMessage(String message) {
-        System.out.println(message);
+        System.out.println(bundle.getString(message));
     }
 
-    public String concatenationString(String... message) {
-        StringBuilder concatString = new StringBuilder();
-        for (String v : message) {
-            concatString = concatString.append(v);
+
+    public void printMessages(String ... message) {
+        for (String s : message) {
+            printMessage(s);
         }
-        return new String(concatString);
     }
+
+    public void printMessageArr(String message) {
+        System.out.println(message);
+    }
+    public void printArr(List<Sweetness> sweetnesses) {
+        for (Sweetness s : sweetnesses) {
+           printMessageArr(s.toString());
+        }
+    }
+
+
+
 }

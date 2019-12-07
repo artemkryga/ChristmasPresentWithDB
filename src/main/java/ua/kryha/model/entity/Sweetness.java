@@ -1,4 +1,4 @@
-package ua.kryha.model;
+package ua.kryha.model.entity;
 
 public abstract class Sweetness {
 
@@ -13,7 +13,7 @@ public abstract class Sweetness {
         this.sugarContent = sugarContent;
     }
 
-    public abstract void draw();
+
 
     public String getName() {
         return name;
@@ -43,6 +43,7 @@ public abstract class Sweetness {
                 ", sugarContent=" + sugarContent +
                 '}';
     }
+
 
     public void setSugarContent(int sugarContent) {
         this.sugarContent = sugarContent;

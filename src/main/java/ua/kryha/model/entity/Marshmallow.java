@@ -1,6 +1,4 @@
-package ua.kryha.model;
-
-import java.util.Random;
+package ua.kryha.model.entity;
 
 public class Marshmallow extends Sweetness {
     int a = 1;
@@ -12,10 +10,6 @@ public class Marshmallow extends Sweetness {
         this.color = getRandomColor(a + (int)(Math.random() * b));
     }
 
-    @Override
-    public void draw() {
-        System.out.println("Marshmallow draw");
-    }
 
     public String getColor() {
         return color;

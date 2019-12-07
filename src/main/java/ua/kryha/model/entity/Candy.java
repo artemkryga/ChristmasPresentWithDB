@@ -1,24 +1,18 @@
-package ua.kryha.model;
+package ua.kryha.model.entity;
 
-import java.util.Random;
+import static ua.kryha.view.TextConstants.*;
 
 public class Candy extends Sweetness {
-    int a = 1;
-    int b = 2;
-    int c = 3;
+
     private boolean hasNut;
     private String kindOfChoko;
 
     public Candy(String name, int weight, int sugarContent) {
         super(name, weight, sugarContent);
-        this.kindOfChoko = getRandomKindOfChoko(a + (int)(Math.random() * c));
-        this.hasNut = getRandomHasNut(a + (int)(Math.random() * b));
+        this.kindOfChoko = getRandomKindOfChoko(ONE + (int) (Math.random() * THREE));
+        this.hasNut = getRandomHasNut(ONE + (int) (Math.random() * TWO));
     }
 
-    @Override
-    public void draw() {
-        System.out.println("Candy draw");
-    }
 
     public boolean isHasNut() {
         return hasNut;
@@ -38,12 +32,11 @@ public class Candy extends Sweetness {
 
     public String getRandomKindOfChoko(int key) {
 
-            if (key == 1){
-                return "white";
-            }
-            else if (key == 2)
-                return "Milk";
-            else return "Dark";
+        if (key == 1) {
+            return "white";
+        } else if (key == 2)
+            return "Milk";
+        else return "Dark";
 
     }
 
